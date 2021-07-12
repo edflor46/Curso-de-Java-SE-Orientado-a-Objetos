@@ -51,3 +51,23 @@ La **Modularidad** en **Programación Orientada a Objetos** nos ayuda a:
 - Que nuestro código sea mantenible.
 - Mejorar la legibilidad.
 - Resolución rápida de problemas.
+
+## Creando la primera Clase (Doctor)
+
+<pre>
+    <code>// Clases:
+public class Doctor {
+  // Atributos:
+  int id;
+  String name;
+  String speciality;
+
+  // Comportamientos (métodos):
+  public void showName() {
+    // Instrucciones...
+  }
+}</code>
+</pre>
+
+### Demo:
+![Clase_Doctor](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626133623/Academia-Java.-CDMX/JavaSE-POO/clases_q6obzr.png)
