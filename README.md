@@ -41,3 +41,13 @@ Atributos: Name, Age
 Operaciones: Walk()</code>
 
 
+## Modularidad
+La **Modularidad** consiste en dividir nuestro programa en diferentes módulos de forma que puedan unirse o separarse sin romperse entre ellos o perder alguna funcionalidad.
+
+La **Modularidad** en **Programación Orientada a Objetos** nos ayuda a:
+
+- Reutilizar código.
+- Evitar colapsos.
+- Que nuestro código sea mantenible.
+- Mejorar la legibilidad.
+- Resolución rápida de problemas.
