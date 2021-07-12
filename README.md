@@ -29,3 +29,15 @@ Por ejemplo: el color del auto es verde o rojo (``color`` es el atributo, ``verd
 
 Los Comportamientos o métodos serán todas las operaciones de nuestros objetos que solemos llamar usando verbos o sustantivos y verbos. Por ejemplo: los métodos del objeto sesión pueden ser ``login()``, ``logout()``, ``makeReport()``, etc.
 
+## Abstracción 
+La **Abstracción** se trata de analizar objetos de forma independiente, sus propiedades, características y comportamientos, para abstraer su composición y generar un modelo, lo que traducimos a código como clases.
+
+Las Clases son los modelos sobre los cuales construimos nuestros objetos, es decir, las clases son los “moldes” que nos permiten generar objetos. Cada clase debe tener identidad (con un nombre de clase único usando **Upper Camel Case**), estado (con sus **atributos**) y comportamiento (con sus **métodos** y **operaciones**).
+
+Por ejemplo:
+``El ejemplo de clase más típico en Internet:``
+<code>Nombre de la clase: Person
+Atributos: Name, Age
+Operaciones: Walk()</code>
+
+
