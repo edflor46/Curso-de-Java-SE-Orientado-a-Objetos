@@ -3,6 +3,7 @@ public class Doctor {
     static int id = 0;//Autoincrement
     String name;
     String speciality;
+    String email;
 
     //Constructor, cada vez que se instancia aumentara el id en 1
     Doctor(){

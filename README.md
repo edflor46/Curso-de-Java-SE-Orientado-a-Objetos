@@ -205,5 +205,32 @@ El uso más común de la sobrecarga de métodos es la sobrecarga de constructore
         System.out.println(myDoctor.speciality);</code>
 </pre>>
 
-## Demo:
+### Demo:
 ![Sobrecarga](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626157399/Academia-Java.-CDMX/JavaSE-POO/Sobre_carga_h37ayg.png)
+
+## Encapsulamiento: Modificadores de acceso
+Los Modificadores de Acceso nos ayudan a limitar desde dónde podemos leer o modificar atributos especiales de nuestras clases. Podemos definir qué variables se pueden leer/editar por fuera de las clases donde fueron creadas. Esto lo conocemos como Encapsulamiento.
+
+![Modificadores_Acesso](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626193159/Academia-Java.-CDMX/JavaSE-POO/Screen_Shot_2019-07-16_at_5.42.34_PM-05985be5-929e-4e87-8137-c1c5b16c96c2_ctpbj8.jpg)
+
+## Getters y Setters
+
+Los Getters y Setters nos permiten leer y escribir (respectivamente) los valores de nuestras variables privadas desde fuera de la clase donde fueron creadas. Con los Getters obtenemos los datos de las variables y con los Setters asignamos o cambiamos su valor.
+
+<pre>
+  <code>public class Patient {
+  private String name;
+
+  public String getName() {
+    return "Patient name is " + this.name;
+  }
+
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}</code>
+
+</pre>
+
+### Demo
+![encapsulamiento](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626194487/Academia-Java.-CDMX/JavaSE-POO/Encapsulamiento_t0dwni.png)
