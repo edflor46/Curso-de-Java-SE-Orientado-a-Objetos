@@ -332,3 +332,55 @@ Imprimirá: **MONDAY**
 </pre>
 
 Imprimirá: **Lunes**
+
+## Herencia
+**Don’t repeat yourself** (DRY) consiste en detectar cuando estamos repitiendo el mismo código una y otra vez para crear algún método o función que nos ayude a evitar estos repetidos.
+
+Esta es una de las bases de la programación que siempre debemos tener en cuenta, ya que nos ayuda a reducir la dificultad de nuestro código para implementar cambios y/o mejoras en nuestra aplicación.
+
+La Herencia consiste en crear nuevas clases a partir de otras clases, establecemos una relación padre e hijo entre nuestras clases. Es diferente a las clases anidadas, ya que, en vez de crear clases dentro de clases, le indicamos a nuestras subclases de qué superclase pueden heredar (``extends``) para reutilizar el código de algunos de sus métodos.
+
+Recuerda que **nuestras clases no pueden heredar de más de una clase**.
+
+<pre>
+  <code>public class SuperClass {
+  // ...
+}</code>
+</pre>
+
+<pre>
+  <code>public class SubClass extends SuperClass {
+  // ...
+}</code>
+</pre>
+
+## Super y This
+
+``Super`` indica que una variable o método es de la clase padre, la superclase de cual heredan nuestras subclases, solo la usamos cuando aplicamos herencia.
+
+Además, podemos llamar al constructor de la clase padre desde sus diferentes subclases usando ``super();`` y enviando los argumentos que sean necesarios.
+
+Por otro lado, ``this`` nos permite especificar que nuestras variables están señalando a la misma clase donde estamos trabajando, ya sea una clase normal, anidada, subclase o superclase.
+
+<pre>
+  <code>public class User {
+  int age = 1;
+
+  public int getAge() {
+    return this.age;
+  }
+}
+
+public class Doctor extends User {
+  String speciality = "Dentist";
+
+  Doctor() {
+    super.getAge(); // 1
+    this.getSpeciality(); // Dentist
+  }
+
+  public int getSpeciality() {
+    return this.speciality;
+  }
+} </code>
+</pre>
