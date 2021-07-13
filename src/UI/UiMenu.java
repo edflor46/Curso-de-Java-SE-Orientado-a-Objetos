@@ -3,9 +3,11 @@ package UI;
 import java.util.Scanner;
 
 public class UiMenu {
-    //Metodos estaticos
+    public static final String[] MONTHS = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
+            "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
-     public static  void  showMenu(){
+    //Metodos estaticos
+    public static void showMenu() {
         System.out.println("Welcome to my Appointments");
         System.out.println("Seleccion de opcion deseada");
 
@@ -19,7 +21,7 @@ public class UiMenu {
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
 
-            switch (response){
+            switch (response) {
                 case 1:
                     System.out.println("Doctor");
                     break;
@@ -35,10 +37,10 @@ public class UiMenu {
                 default:
                     System.out.println("Please select correct answer");
             }
-        }while (response != 0);
+        } while (response != 0);
     }
 
-     static void showPatientMenu(){
+    static void showPatientMenu() {
         int response = 0;
         do {
             System.out.println("\n\n");
@@ -50,9 +52,13 @@ public class UiMenu {
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
 
-            switch (response){
+            switch (response) {
                 case 1:
                     System.out.println("::Book an appointment");
+                    //Lista de los 3 primeros meses
+                    for (int i = 0; i <= 2; i++) {
+                        System.out.println(i + ". " + MONTHS[i]);
+                    }
                     break;
 
                 case 2:
@@ -64,6 +70,6 @@ public class UiMenu {
                     break;
 
             }
-        }while (response != 0);
+        } while (response != 0);
     }
 }
