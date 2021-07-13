@@ -96,3 +96,41 @@ El compilador de Java crea un método constructor en caso de que no definamos un
 
 ### Demo:
 ![Constructor](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626134448/Academia-Java.-CDMX/JavaSE-POO/Constructor_py4w0v.png)
+
+## Static: Variables y Métodos Estáticos
+
+Los métodos y variables ``estáticos`` nos ayudan a ejecutar o conseguir algún código desde clases no han sido instanciadas, ya que sus valores se guardan en la memoria de nuestro programa, no en diferentes objetos instanciados a través de una clase.
+
+Las variables estáticas mantienen su valor durante todo el ciclo de vida de nuestro programa, por lo tanto, podemos alterar los valores de una variable estática desde una clase y consumir su valor alterado desde otra sin necesidad de conectar ambas clases.
+
+También podemos importar los métodos ``estáticos`` de una clase para usarlos sin necesidad de escribir el nombre de la clase:
+
+<pre>
+<code>import static com.anncode.operaciones.Calculadora.*
+import static java.lang.Math.*
+
+public class Principal {
+  public static void (String[] args) {
+    int number = suma(3, 5);
+    System.out.println(number + PI);
+  }
+}</code>
+</pre>
+
+**Variable estática**
+La variable id al ser estatica se puede modificar de distintas clases y de esta manera mantener un incremento y poder mutarla desde otra clase.
+![Var_Estatica](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626149993/Academia-Java.-CDMX/JavaSE-POO/VarStatic_kt1kcb.png)
+
+**Método Estático**
+Mediante métodos estáticos podemos importarlo en la clase main y de esta manera hacer uso de estos métodos como si fueran parte de la misma clase main.
+
+**Clase main**:
+![Main_Static](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626151744/Academia-Java.-CDMX/JavaSE-POO/MainStatic_fgmqhb.png)
+
+**Método static Ui**
+![Metodo_Static](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626152069/Academia-Java.-CDMX/JavaSE-POO/metodosStatic_z9di2t.png)
+
+**Demo:**
+![Ejecucion_static](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626152021/Academia-Java.-CDMX/JavaSE-POO/EjecucionStatic_joudls.png)
+
+
