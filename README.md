@@ -154,4 +154,56 @@ Seguidamente recorremos la colección de meses mediante un bucle for para mostra
 ![Final](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626153790/Academia-Java.-CDMX/JavaSE-POO/final_g0jzo1.png)
 
 
+## Sobrecarga de métodos y constructores
 
+A veces necesitamos que dos o más métodos de una misma clase tengan el mismo nombre, pero con diferentes argumentos o distintos tipos de argumentos/valores de retorno.
+
+<pre>
+    <code>public class Calculadora {
+  // Los dos parámetros y el valor de retorno son de tipo int
+  public int suma(int a, int b) {
+    return a + b;
+  }
+
+  // Los dos parámetros y el valor de retorno son de tipo float
+  public float suma(float a, float b) {
+    return a + b;
+  }
+
+  // Un parámetro es de tipo int, mientras que el otro parámetro
+  // y el valor de retorno son de tipo float
+  public float suma(int a, float b) {
+    return a + b;
+  }
+}</code>
+</pre>
+
+El uso más común de la sobrecarga de métodos es la sobrecarga de constructores para instanciar objetos de formas distintas dependiendo de la cantidad de argumentos que enviamos.
+
+<pre>
+    <code>public class Doctor {
+  static int id = 0;
+  String name;
+  String speciality;
+
+  public Doctor() {
+    this.name = "Nombre por defecto";
+    this.speciality = "Especialidad por defecto";
+  }
+
+  public Doctor(String name, String speciality) {
+    this.name = name;
+    this.speciality = speciality;
+  }
+}</code>
+</pre>
+
+<pre>
+    <code>//Clase main
+    Doctor myDoctor = new Doctor("Eduardo Flores", "Pediatria");
+        System.out.println(myDoctor.name);
+        System.out.println(myDoctor.speciality);</code>
+</pre>>
+
+## Demo:
+![Sobrecarga](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626157399/Academia-Java.-CDMX/JavaSE-POO/Sobre_carga_h37ayg.png)
