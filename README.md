@@ -250,3 +250,6 @@ Las **Clases Anidadas** o **Clases Helper** son clases dentro de otras clases qu
 Podemos encontrar **clases estáticas anidadas**, **clases internas** que son locales a un método o clases internas anónimas. Las **clases anidadas** pueden llamar a cualquier tipo de elemento o método de nuestras clases.
 
 Las **Clases Estáticas** no necesitan ser instanciadas para poder ser llamadas y ejecutadas, aunque debes recordar que solo permiten llamar a los métodos estáticos de sus clases padre.
+
+### Demo:
+![Clase_Anidada](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626202659/Academia-Java.-CDMX/JavaSE-POO/Clase_anidada_i4ykbw.png)
