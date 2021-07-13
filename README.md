@@ -253,3 +253,82 @@ Las **Clases Estáticas** no necesitan ser instanciadas para poder ser llamadas 
 
 ### Demo:
 ![Clase_Anidada](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626202659/Academia-Java.-CDMX/JavaSE-POO/Clase_anidada_i4ykbw.png)
+
+## Enumerations
+
+Los **``enumerations** son tipos de datos muy especiales pues este, es el único en su tipo que sirve para declarar una colección de constantes, al ser así estaremos obligados a escribirlos con mayúsculas.
+
+Usaremos `enum` cada vez que necesitemos representar un conjunto fijo de constantes. Por ejemplo los días de la semana.
+
+Así podemos declarar un enumeration usando la palabra reservada ``enum``.
+
+<pre>
+  <code>public enum Day {
+	SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+	THURSDAY, FRIDAY, SATURDAY
+}</code>
+</pre>
+
+Crear referencias de enumerations de la siguiente forma:
+<pre>
+  <code>Day day;
+switch (day) {
+	case MONDAY:
+		System.out.println(“Mondays are good.”);
+		break;
+	case FRIDAY:
+		System.out.println(“Fridays are nice”);
+		break;
+	case SATURDAY: case: SUNDAY:
+		System.out.println(“Weekends are the best”);
+		break;
+	default:
+		System.out.println(“Midweek are so-so”);
+		break;
+
+}</code>
+</pre>
+
+ Llamar un valor del enumeration así:
+
+ <pre>
+  <code>Day.MONDAY;
+Day.FRIDAY;
+Day.SATURDAY
+</code>
+ </pre>
+
+ Los enumerations pueden tener atributos, métodos y constructores, como se muestra:
+
+<pre>
+  <code>public enum Day {
+  MONDAY("Lunes");
+  TUESDAY("Jueves");
+  FRIDAY("Viernes");
+  SATURDAY("Sábado");
+  SUNDAY("Domingo");
+
+  private String spanish;
+  private Day(String s) {
+    spanish = s;
+  }
+
+  private String getSpanish() {
+    return spanish;
+  }
+}</code>
+</pre>
+
+Y para utilizarlo lo podemos hacer así:
+<pre>
+  <code>System.out.println(Day.MONDAY);
+</code>
+</pre>
+
+Imprimirá: **MONDAY**
+
+<pre>
+  <code>System.out.println(Day.MONDAY.getSpanish());</code>
+</pre>
+
+Imprimirá: **Lunes**
