@@ -1,4 +1,4 @@
-public class Patient extends  User{
+public class Patient extends User {
     //Atributos
     private String birthday;
     private double weight;
@@ -7,6 +7,7 @@ public class Patient extends  User{
 
     Patient(String name, String email) {
         super(name, email);
+        //mas instrucciones
 
     }
 
@@ -41,5 +42,10 @@ public class Patient extends  User{
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " + getBlood() + "\n Height: " + getHeight() + "\n Blood" + blood;
     }
 }

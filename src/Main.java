@@ -8,21 +8,24 @@ public class Main {
         //showMenu();
 
         //Doctor
-        Doctor myDoctor = new Doctor("Eduardo Flores", "Pediatria");
+        Doctor myDoctor = new Doctor("Eduardo Flores", "edflor@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "3 pm");
         myDoctor.addAvailableAppointment(new Date(), "10 am");
         myDoctor.addAvailableAppointment(new Date(), "8 am");
-
-        for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
+        System.out.println(myDoctor);
+        /*for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
+         */
 
+        System.out.println();
+        System.out.println();
 
         //Patient
-        Patient patient = new Patient("Alejandara", "alejandra@gmail.com");
-        patient.setWeight(54.6);
-        //System.out.println(patient.getWeight());
-        //patient.setPhoneNumber("123456789");
+        Patient patient  = new Patient("Alejandra", "alejandra@gmail.com");
+        System.out.println(patient);
+
+
 
 
 
