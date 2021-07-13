@@ -234,3 +234,12 @@ Los Getters y Setters nos permiten leer y escribir (respectivamente) los valores
 
 ### Demo
 ![encapsulamiento](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626194487/Academia-Java.-CDMX/JavaSE-POO/Encapsulamiento_t0dwni.png)
+
+## Variables vs Objetos
+
+Las **Variables** son entidades elementales muy sencillas, pueden ser ``números``, ``caracteres``, ``booleanos``, entre otras. Los **Objetos** son entidades complejas que pueden estar formadas por la agrupación de diferentes **variables** y **métodos**.
+
+Los **Objetos Primitivos** o **Clases Wrapper** son **variables primitivas** que trabajan con algún tipo de dato y también tienen las características de los objetos.
+
+Por ejemplo: ``Byte``, ``Short``, ``Integer``, ``Long``, ``Float``, ``Double``, ``Character``, ``Boolean`` o ``String``.
+
