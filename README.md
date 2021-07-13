@@ -71,3 +71,28 @@ public class Doctor {
 
 ### Demo:
 ![Clase_Doctor](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626133623/Academia-Java.-CDMX/JavaSE-POO/clases_q6obzr.png)
+
+## Constructor
+El Método Constructor es el primer método que se ejecuta por defecto cuando creamos una clase, nos permite crear nuevas instancias de una clase. Lo invocamos con la palabra reservada ``new`` seguida del nombre con el que inicializamos la clase y paréntesis.
+
+<pre>
+    <code>// nombreDeLaInstancia = new MétodoConstructor();
+myDoctor = new Doctor();</code>
+</pre>
+
+El compilador de Java crea un método constructor en caso de que no definamos uno, pero de todas formas es muy buena idea programarlo nosotros, ya que nos permite definir y/o configurar el comportamiento de nuestros objetos usando argumentos.
+
+<pre>
+    <code>public class Doctor {
+  // Atributos...
+
+  // Método Constructor:
+  Doctor(/* parámetros */) {
+    // Instrucciones que se ejecutan al crear/instanciar
+    // un nuevo objeto con la clase Doctor...
+  }
+}</code>
+</pre>
+
+### Demo:
+![Constructor](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626134448/Academia-Java.-CDMX/JavaSE-POO/Constructor_py4w0v.png)
