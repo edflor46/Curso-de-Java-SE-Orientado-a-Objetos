@@ -584,3 +584,15 @@ Diagrama de su composición:
 
 **Confirmar cita**
 ![asd](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238050/Academia-Java.-CDMX/JavaSE-POO/Login_5_dsmxhr.png)
+
+## Agendar citas (Paciente)
+
+**Seleccionar cita**
+![Cita_!](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626245547/Academia-Java.-CDMX/JavaSE-POO/agendar_cita__eobmcb.png)
+
+**Confirmar cita seleccionada**
+![cita_2](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626245547/Academia-Java.-CDMX/JavaSE-POO/agendar_cita_2_lcjlbx.png)
+
+**Detalles de cita**
+![cita_3](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626245547/Academia-Java.-CDMX/JavaSE-POO/agendar_cita_3_mtgjn7.png)
+
