@@ -52,11 +52,11 @@ La **Modularidad** en **Programación Orientada a Objetos** nos ayuda a:
 - Mejorar la legibilidad.
 - Resolución rápida de problemas.
 
-## Creando la primera Clase (Doctor)
+## Creando la primera Clase (model.Doctor)
 
 <pre>
     <code>// Clases:
-public class Doctor {
+public class model.Doctor {
   // Atributos:
   int id;
   String name;
@@ -77,19 +77,19 @@ El Método Constructor es el primer método que se ejecuta por defecto cuando cr
 
 <pre>
     <code>// nombreDeLaInstancia = new MétodoConstructor();
-myDoctor = new Doctor();</code>
+myDoctor = new model.Doctor();</code>
 </pre>
 
 El compilador de Java crea un método constructor en caso de que no definamos uno, pero de todas formas es muy buena idea programarlo nosotros, ya que nos permite definir y/o configurar el comportamiento de nuestros objetos usando argumentos.
 
 <pre>
-    <code>public class Doctor {
+    <code>public class model.Doctor {
   // Atributos...
 
   // Método Constructor:
-  Doctor(/* parámetros */) {
+  model.Doctor(/* parámetros */) {
     // Instrucciones que se ejecutan al crear/instanciar
-    // un nuevo objeto con la clase Doctor...
+    // un nuevo objeto con la clase model.Doctor...
   }
 }</code>
 </pre>
@@ -181,17 +181,17 @@ A veces necesitamos que dos o más métodos de una misma clase tengan el mismo n
 El uso más común de la sobrecarga de métodos es la sobrecarga de constructores para instanciar objetos de formas distintas dependiendo de la cantidad de argumentos que enviamos.
 
 <pre>
-    <code>public class Doctor {
+    <code>public class model.Doctor {
   static int id = 0;
   String name;
   String speciality;
 
-  public Doctor() {
+  public model.Doctor() {
     this.name = "Nombre por defecto";
     this.speciality = "Especialidad por defecto";
   }
 
-  public Doctor(String name, String speciality) {
+  public model.Doctor(String name, String speciality) {
     this.name = name;
     this.speciality = speciality;
   }
@@ -200,7 +200,7 @@ El uso más común de la sobrecarga de métodos es la sobrecarga de constructore
 
 <pre>
     <code>//Clase main
-    Doctor myDoctor = new Doctor("Eduardo Flores", "Pediatria");
+    model.Doctor myDoctor = new model.Doctor("Eduardo Flores", "Pediatria");
         System.out.println(myDoctor.name);
         System.out.println(myDoctor.speciality);</code>
 </pre>>
@@ -218,11 +218,11 @@ Los Modificadores de Acceso nos ayudan a limitar desde dónde podemos leer o mod
 Los Getters y Setters nos permiten leer y escribir (respectivamente) los valores de nuestras variables privadas desde fuera de la clase donde fueron creadas. Con los Getters obtenemos los datos de las variables y con los Setters asignamos o cambiamos su valor.
 
 <pre>
-  <code>public class Patient {
+  <code>public class model.Patient {
   private String name;
 
   public String getName() {
-    return "Patient name is " + this.name;
+    return "model.Patient name is " + this.name;
   }
 
   public void setName(String newName) {
@@ -363,7 +363,7 @@ Además, podemos llamar al constructor de la clase padre desde sus diferentes su
 Por otro lado, ``this`` nos permite especificar que nuestras variables están señalando a la misma clase donde estamos trabajando, ya sea una clase normal, anidada, subclase o superclase.
 
 <pre>
-  <code>public class User {
+  <code>public class model.User {
   int age = 1;
 
   public int getAge() {
@@ -371,10 +371,10 @@ Por otro lado, ``this`` nos permite especificar que nuestras variables están se
   }
 }
 
-public class Doctor extends User {
+public class model.Doctor extends model.User {
   String speciality = "Dentist";
 
-  Doctor() {
+  model.Doctor() {
     super.getAge(); // 1
     this.getSpeciality(); // Dentist
   }
@@ -394,11 +394,11 @@ La sobreescritura de constructores consiste en usar los miembros heredados de un
 
 Recuerda que no podemos sobrescribir los métodos marcados como final o static.
 
-**Sobreescritura toString clase User**
+**Sobreescritura toString clase model.User**
 <pre>
   <code>   @Override
     public String toString() {
-        return "User{" +
+        return "model.User{" +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
@@ -407,7 +407,7 @@ Recuerda que no podemos sobrescribir los métodos marcados como final o static.
     }</code>
 </pre>
 
-**Sobreescritura toString clase Patient**
+**Sobreescritura toString clase model.Patient**
 <pre>
   <code> @Override
     public String toString() {
@@ -415,7 +415,7 @@ Recuerda que no podemos sobrescribir los métodos marcados como final o static.
     }</code>
 </pre>
 
-**Sobreescritura toString clase Doctor**
+**Sobreescritura toString clase model.Doctor**
 <pre>
   <code>@Override
     public String toString(){
@@ -433,3 +433,65 @@ Recuerda que no podemos sobrescribir los métodos marcados como final o static.
 ### Demo
 
 ![Polimorfismo_toString](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626216150/Academia-Java.-CDMX/JavaSE-POO/Polimorfismo_gvmdec.png)
+
+## Interfaces
+
+Las **Interfaces** son un tipo de referencia similar a una clase con solo constantes y definiciones de métodos, son de gran ayuda para definir los comportamientos que son redundantes y queremos reutilizar un más de una clase, incluso cuando tenemos muchas clases y no todas pertenecen a la misma “familia”.
+
+Las interfaces establecen la forma de las clases que la implementan, así como sus nombres de métodos, listas de argumentos y listas de retorno, pero NO sus bloques de código, eso es responsabilidad de cada clase.
+
+**Composición de Interfaces en Clases:** abstraer todos los métodos/comportamientos de una clase para modularizarlos (comprimirlos, encapsularlos) en una interfaz y reutilizar su código en diferentes clases.
+
+Las interfaces se crean utilizando la palabra reservada ``interface`` y se implementan en nuestras clases con ``implements``.
+
+<pre>
+  <code>public interface ISchedulabe {
+  void schedule(Date date, String Time);
+}
+
+public class AppointmentDoctor implements ISchedulable {
+  @Override
+  public void schedule(Date date, String Time) {
+    // ...
+  }
+}</code> 
+</pre>
+
+**Interface ISchedulable**
+<pre>
+  <code>package model;
+
+import java.util.Date;
+
+public interface ISchedulable {
+
+    void schedule(Date date, String time);
+
+}</code>
+</pre>
+
+**Implement Interface ISchedulable en AppointmentNurse**
+<pre>
+  <code>public class AppointmentNurse implements  ISchedulable{
+    private  int id;
+    private Nurse nurse;
+    private Patient patient;
+    private Date date;
+    private String time;
+    }</code>
+</pre>
+
+**Implement Interface ISchedulable en AppointmentDoctor**
+<pre>
+  <code>package model;
+
+import java.util.Date;
+
+public class AppointmentDoctor implements ISchedulable{
+    private int id;
+    private Patient patient;
+    private Doctor doctor;
+    private Date date;
+    private String time;
+}</code>
+</pre>
