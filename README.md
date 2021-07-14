@@ -505,3 +505,62 @@ Los **collections** se diferencian de los arrays en que su tamaño no es fijo y 
 
 Diagrama de su composición:
 ![Collections](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626231155/Academia-Java.-CDMX/JavaSE-POO/composicion._collection_cgeyv2.webp)
+
+## Simulando autenticación de usuarios
+
+<pre>
+  <code>private static void  authUser(int userType){
+        //UserType = 1 Doctor
+        //UserType = 2 Patient
+
+        //Datos de los Doctores
+        ArrayList<Doctor> doctors = new ArrayList<>();
+        doctors.add(new Doctor("Eduardo Flores", "eduardoFlores@gmail.com"));
+        doctors.add(new Doctor("Karen Sosa", "karens@gmail.com"));
+        doctors.add(new Doctor("Rocio Gomez", "rociog@gmail.com"));
+
+        //Datos de los pacientes
+        ArrayList<Patient> patients = new ArrayList<>();
+        patients.add(new Patient("Eduardo Ramirez", "eduRamirez@gmail.com"));
+        patients.add(new Patient("Roberto Rodriguez", "robertp@gmail.com"));
+        patients.add(new Patient("Carlos Sanchez", "Carlos@gmail.com"));
+
+        //Flag emailCorrect
+        boolean emailCorrect = false;
+
+        //Ejecutar hasta hacer match con algun email
+        do {
+            System.out.println("Insert Your email: [a@a.com]");
+            Scanner sc = new Scanner(System.in);
+            String email = sc.nextLine();
+            
+            //Si viene entonces es un doctor
+            if (userType == 1){
+                //Reccore la coleccion de datos
+                for (Doctor d: doctors){
+                    if (d.getEmail().equals(email)){
+                        emailCorrect = true;
+                        //Obtener el usuario loggeado
+                        doctorLogged = d;
+                        //ShowDoctorMenu
+
+                    }
+                }
+            }
+            //Si es dos entonces es un paciente
+            if (userType == 2){
+                //Reccore la coleccion de datos
+                for (Patient p: patients){
+                    if (p.getEmail().equals(email)){
+                        emailCorrect = true;
+                        //Obtener el usuario loggeado
+                        patientLogged = p;
+                        //ShowPatientMenu
+
+
+                    }
+                }
+            }
+        }while (!emailCorrect);//Si el email no es correcto ejecutar el bucle
+    }</code>
+</pre>
