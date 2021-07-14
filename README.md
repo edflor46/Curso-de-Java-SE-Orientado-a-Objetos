@@ -495,3 +495,13 @@ public class AppointmentDoctor implements ISchedulable{
     private String time;
 }</code>
 </pre>
+
+## Collections
+Otras **interfaces** que son muy importantes en Java son los llamados **Collections**
+
+Los **Collections** nos van a servir para trabajar con colecciones de datos, específicamente y solamente con objetos, para esto recuerda que tenemos disponibles nuestras clases Wrapper que nos ayudan a convertir datos primitivos a objetos.
+
+Los **collections** se diferencian de los arrays en que su tamaño no es fijo y por el contrario es dinámico.
+
+Diagrama de su composición:
+![Collections](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626231155/Academia-Java.-CDMX/JavaSE-POO/composicion._collection_cgeyv2.webp)
