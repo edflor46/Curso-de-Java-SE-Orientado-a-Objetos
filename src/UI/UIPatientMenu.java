@@ -26,8 +26,6 @@ public class UIPatientMenu {
                 case 1:
                     showBookAppointMenu();
                     break;
-
-
                 case 2:
                     showPAtientMyAppointmets();
                     break;
