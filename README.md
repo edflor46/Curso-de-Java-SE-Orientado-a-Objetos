@@ -564,3 +564,23 @@ Diagrama de su composición:
         }while (!emailCorrect);//Si el email no es correcto ejecutar el bucle
     }</code>
 </pre>
+
+## Registro de citas 
+
+**Doctor**
+![Doctor](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238047/Academia-Java.-CDMX/JavaSE-POO/Login_1_eut162.png)
+
+**Login**
+![Login_email](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238047/Academia-Java.-CDMX/JavaSE-POO/Login_2_d54lhr.png)
+
+**Selección del mes para la cita**
+![mes_cita](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238048/Academia-Java.-CDMX/JavaSE-POO/Login_3_l2ptih.png)
+
+**Fecha de la cita**
+![fecha](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238048/Academia-Java.-CDMX/JavaSE-POO/Login_4_mrgkpk.png)
+
+**Hora de la cita**
+![hora_Cita](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238050/Academia-Java.-CDMX/JavaSE-POO/Login_5_dsmxhr.png)
+
+**Confirmar cita**
+![asd](https://res.cloudinary.com/dvhl6xkqf/image/upload/v1626238050/Academia-Java.-CDMX/JavaSE-POO/Login_5_dsmxhr.png)
